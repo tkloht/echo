@@ -3,12 +3,6 @@ import { NextRequest } from "next/server";
 
 const maximumDelay = 20000;
 
-export const config = {
-  api: {
-    bodyParser: true,
-  },
-};
-
 async function handleRequest(request: NextRequest) {
   const searchParams = new URLSearchParams(request.nextUrl.search);
   const delay = Number(searchParams.get("delay"));
