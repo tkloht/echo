@@ -7,6 +7,8 @@ async function handleRequest(request: NextRequest) {
   const searchParams = new URLSearchParams(request.nextUrl.search);
   const delay = Number(searchParams.get("delay"));
 
+  console.log("[Received Request]", request.method);
+
   let body;
 
   if (request.body) {
